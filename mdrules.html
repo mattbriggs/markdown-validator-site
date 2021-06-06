@@ -85,11 +85,12 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">mdrules module</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test.html">About the design of the validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">markdown-validator</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -161,30 +162,6 @@
 - Rule. This is a container to hold the attributes of a rule.
 - Rules. This contains a list of the rules.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="mdrules.Checks">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdrules.</span></span><span class="sig-name descname"><span class="pre">Checks</span></span><a class="headerlink" href="#mdrules.Checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Contains a list of validation checks.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="mdrules.Checks.file_check">
-<span class="sig-name descname"><span class="pre">file_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Checks.file_check" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdrules.Checks.get_check">
-<span class="sig-name descname"><span class="pre">get_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Checks.get_check" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdrules.Checks.load_check">
-<span class="sig-name descname"><span class="pre">load_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Checks.load_check" title="Permalink to this definition">¶</a></dt>
-<dd><p>With a dictionary of key values, load a check object, and add to the
-list_of_checks.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="mdrules.Rule">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdrules.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><a class="headerlink" href="#mdrules.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -204,9 +181,28 @@ list_of_rules.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="mdrules.Rules.load_page">
+<span class="sig-name descname"><span class="pre">load_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.load_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>With a filepath to a markdown page, load the page.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.load_rules">
 <span class="sig-name descname"><span class="pre">load_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputjson</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.load_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>With a json object, load the rules list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdrules.Rules.process_rule">
+<span class="sig-name descname"><span class="pre">process_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.process_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>With a rule object loaded with rules, a path to a markdown file, and 
+the rule id, run the rules and return a validaton object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdrules.Rules.validate_rules">
+<span class="sig-name descname"><span class="pre">validate_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.validate_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>With rules and a file to check run all of the rules.</p>
 </dd></dl>
 
 </dd></dl>

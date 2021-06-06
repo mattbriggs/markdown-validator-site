@@ -85,11 +85,12 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">mdworkflow module</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test.html">About the design of the validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">markdown-validator</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -169,33 +170,13 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class to process a workflow object.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.action">
-<span class="sig-name descname"><span class="pre">action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.action" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mdworkflow.Workflow.check_truth">
+<span class="sig-name descname"><span class="pre">check_truth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.check_truth" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.create_rules">
-<span class="sig-name descname"><span class="pre">create_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_json</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.create_rules" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.d">
-<span class="sig-name descname"><span class="pre">d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.d" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.e">
-<span class="sig-name descname"><span class="pre">e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.e" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.f">
-<span class="sig-name descname"><span class="pre">f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.m">
-<span class="sig-name descname"><span class="pre">m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.m" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mdworkflow.Workflow.is_number">
+<span class="sig-name descname"><span class="pre">is_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.is_number" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -211,39 +192,12 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.process_rule">
-<span class="sig-name descname"><span class="pre">process_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.process_rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>With a rule object loaded with rules, a path to a markdown file, and 
-the rule id, run the rules and return a validaton object.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.run_rule_body">
-<span class="sig-name descname"><span class="pre">run_rule_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runstate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.run_rule_body" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.run_rule_header">
-<span class="sig-name descname"><span class="pre">run_rule_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runstate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.run_rule_header" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="mdworkflow.Workflow.run_workflow">
-<span class="sig-name descname"><span class="pre">run_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.run_workflow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Process a workflow. A workflow is a list of tuples. Returns a runner
+<span class="sig-name descname"><span class="pre">run_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.run_workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process a rules and workflow steps. rules are a Rule object. 
+A workflow is a list of tuples. Returns a runner
 object.</p>
 </dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.s">
-<span class="sig-name descname"><span class="pre">s</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.s" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start function.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mdworkflow.Workflow.t">
-<span class="sig-name descname"><span class="pre">t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">inbox=&lt;mdrunner.Box</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.t" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 

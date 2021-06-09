@@ -163,18 +163,19 @@
 working with text files.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mod_utilities.get_files">
-<span class="sig-prename descclassname"><span class="pre">mod_utilities.</span></span><span class="sig-name descname"><span class="pre">get_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_utilities.get_files" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">mod_utilities.</span></span><span class="sig-name descname"><span class="pre">get_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.md'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mod_utilities.get_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>With the directory path, returns a list of markdown file paths.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inpath</strong> – Path to the folder containing the files.</p></li>
+<li><p><strong>extension</strong> – File extension to filter retrieved files.</p></li>
+</ul>
 </dd>
 </dl>
 <p>…
-:raises [ErrorType]: [ErrorDescription]
-…
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
+:return: Returns a list of filtered files.
+:rtype: List</p>
 </dd></dl>
 
 <dl class="py function">
@@ -183,14 +184,12 @@ working with text files.</p>
 <dd><p>Return text from a MD filename path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><p><strong>path</strong> – Path to a file. (c:        extfile.txt)</p>
 </dd>
 </dl>
 <p>…
-:raises [ErrorType]: [ErrorDescription]
-…
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
+:return: The text from the file.
+:rtype: string</p>
 </dd></dl>
 
 <dl class="py function">
@@ -204,14 +203,14 @@ working with text files.</p>
 <dd><p>Write CSV file to the path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outbody</strong> – A list of lists containing the header and rows.</p></li>
+<li><p><strong>path</strong> – Full path name including the file. (c:output.csv)</p></li>
+</ul>
 </dd>
 </dl>
 <p>…
-:raises [ErrorType]: [ErrorDescription]
-…
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
+:raises Error: Prints the error code.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -220,14 +219,12 @@ working with text files.</p>
 <dd><p>Write text file to the path.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outbody</strong> – The contents of the file to saved as a string.</p></li>
+<li><p><strong>path</strong> – Path to a file. (c:        extfile.txt)</p></li>
+</ul>
 </dd>
 </dl>
-<p>…
-:raises [ErrorType]: [ErrorDescription]
-…
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
 </dd></dl>
 
 </div>

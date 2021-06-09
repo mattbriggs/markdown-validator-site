@@ -158,14 +158,26 @@
             
   <div class="section" id="module-mdrules">
 <span id="mdrules-module"></span><h1>mdrules module<a class="headerlink" href="#module-mdrules" title="Permalink to this headline">¶</a></h1>
-<p>Classes for the rules.
-- Rule. This is a container to hold the attributes of a rule.
-- Rules. This contains a list of the rules.</p>
+<p>Module contains the classes for the rules.</p>
+<ul class="simple">
+<li><p>Rule class. This is a container to hold the attributes of a rule.</p></li>
+<li><p>Rules class. This contains a list of the rules.</p></li>
+</ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="mdrules.Rule">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdrules.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><a class="headerlink" href="#mdrules.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Contains the attributes of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 <dl class="py class">
@@ -173,23 +185,63 @@
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdrules.</span></span><span class="sig-name descname"><span class="pre">Rules</span></span><a class="headerlink" href="#mdrules.Rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Contains a list of rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.load_object">
 <span class="sig-name descname"><span class="pre">load_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.load_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>With a dictionary of key values, load a Rule object, and add to the
 list_of_rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.load_page">
 <span class="sig-name descname"><span class="pre">load_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.load_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>With a filepath to a markdown page, load the page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.load_rules">
 <span class="sig-name descname"><span class="pre">load_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputjson</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.load_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>With a json object, load the rules list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 <dl class="py method">
@@ -197,12 +249,32 @@ list_of_rules.</p>
 <span class="sig-name descname"><span class="pre">process_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.process_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>With a rule object loaded with rules, a path to a markdown file, and 
 the rule id, run the rules and return a validaton object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.validate_rules">
 <span class="sig-name descname"><span class="pre">validate_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.validate_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>With rules and a file to check run all of the rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 </dd></dl>
@@ -212,6 +284,16 @@ the rule id, run the rules and return a validaton object.</p>
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdrules.</span></span><span class="sig-name descname"><span class="pre">Validation</span></span><a class="headerlink" href="#mdrules.Validation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A container class for validation responses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+</dd>
+</dl>
+<p>…
+:raises [ErrorType]: [ErrorDescription]
+…
+:return: [ReturnDescription]
+:rtype: [ReturnType]</p>
 </dd></dl>
 
 </div>

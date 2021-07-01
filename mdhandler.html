@@ -85,11 +85,12 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">mdhandler module</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test.html">About the design of the validator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">markdown-validator</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -166,6 +167,12 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Object that contains the logic for processing queries.</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="mdhandler.MDHandler.clear_list">
+<span class="sig-name descname"><span class="pre">clear_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.clear_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>With a string dellimited by commas, create a list.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="mdhandler.MDHandler.eval_ask">
 <span class="sig-name descname"><span class="pre">eval_ask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_ask" title="Permalink to this definition">¶</a></dt>
 <dd><p>With the metadata block as json, the operator token, and a value, produce true/false.</p>
@@ -181,6 +188,12 @@
 <dt class="sig sig-object py" id="mdhandler.MDHandler.eval_length">
 <span class="sig-name descname"><span class="pre">eval_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_length" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdhandler.MDHandler.eval_list">
+<span class="sig-name descname"><span class="pre">eval_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_html</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>With the metadata block as json, the operator token, and a value, produce true/false.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mdhandler.MDHandler.eval_meta">
@@ -290,7 +303,8 @@
 <dt class="sig sig-object py" id="mdhandler.MDHandler.process_xpath">
 <span class="sig-name descname"><span class="pre">process_xpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_html</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.process_xpath" title="Permalink to this definition">¶</a></dt>
 <dd><p>With html, an XPATH query, and a flag <cite>count</cite>/<cite>text</cite>, returns the
-the count of nodes, or the content of the first node.</p>
+the a list with the count of nodes, the content of the nodes as a list, or the dom
+strings as a list</p>
 </dd></dl>
 
 </dd></dl>

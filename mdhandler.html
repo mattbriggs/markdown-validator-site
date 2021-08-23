@@ -169,7 +169,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="mdhandler.MDHandler.clear_list">
 <span class="sig-name descname"><span class="pre">clear_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.clear_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>With a string dellimited by commas, create a list.</p>
+<dd><p>With a string delimited by commas, create a list.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -187,12 +187,14 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="mdhandler.MDHandler.eval_length">
 <span class="sig-name descname"><span class="pre">eval_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_length" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Checks that the length of a string is less than the a number.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mdhandler.MDHandler.eval_list">
-<span class="sig-name descname"><span class="pre">eval_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_html</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>With the metadata block as json, the operator token, and a value, produce true/false.</p>
+<span class="sig-name descname"><span class="pre">eval_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_html</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdhandler.MDHandler.eval_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the value to be evaluated is a list, then run the expath query on
+each item.</p>
 </dd></dl>
 
 <dl class="py method">

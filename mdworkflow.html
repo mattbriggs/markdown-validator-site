@@ -233,7 +233,7 @@
 <dd><p>Take a raw set of steps and return as list of tuples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><p><strong>insteps</strong> – a string that is a list of tuples. Each tuple marked with a dash.</p>
 </dd>
 </dl>
 <p>…
@@ -246,12 +246,15 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="mdworkflow.Workflow.run_workflow">
 <span class="sig-name descname"><span class="pre">run_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflow.run_workflow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Process a rules and workflow steps. rules are a Rule object. 
+<dd><p>Process a rules and workflow steps. rules are a Rule object.
 A workflow is a list of tuples. Returns a runner
 object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rules</strong> (<em>Rules object.</em>) – Processed rules.</p></li>
+<li><p><strong>in_steps</strong> (<em>List</em>) – A list of tuples referencing rules.</p></li>
+</ul>
 </dd>
 </dl>
 <p>…
@@ -259,6 +262,31 @@ object.</p>
 …
 :return: [ReturnDescription]
 :rtype: [ReturnType]</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mdworkflow.Workflows">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">mdworkflow.</span></span><span class="sig-name descname"><span class="pre">Workflows</span></span><a class="headerlink" href="#mdworkflow.Workflows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to process workflows</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="mdworkflow.Workflows.get_validation">
+<span class="sig-name descname"><span class="pre">get_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflows.get_validation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the validation status.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdworkflow.Workflows.load_flows">
+<span class="sig-name descname"><span class="pre">load_flows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule_json_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflows.load_flows" title="Permalink to this definition">¶</a></dt>
+<dd><p>With rules and a rule_json_file extract the workflows.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mdworkflow.Workflows.validate_all_workflows">
+<span class="sig-name descname"><span class="pre">validate_all_workflows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mdworkflow.Workflows.validate_all_workflows" title="Permalink to this definition">¶</a></dt>
+<dd><p>With loaded rules and worklows, add result validation objects.</p>
 </dd></dl>
 
 </dd></dl>

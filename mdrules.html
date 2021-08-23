@@ -218,14 +218,16 @@ list_of_rules.</p>
 <dd><p>With a filepath to a markdown page, load the page.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><p><strong>file_to_check</strong> (<em>String</em>) – File path to the a markdown file.</p>
 </dd>
 </dl>
 <p>…
-:raises [ErrorType]: [ErrorDescription]
+:raises General: Error getting file. Captures the exception.
 …
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
+:return: Rule.path. File path to the a markdown file.
+:rtype: String
+:return: Rule.page. 
+:rtype: Page object</p>
 </dd></dl>
 
 <dl class="py method">
@@ -264,17 +266,18 @@ the rule id, run the rules and return a validaton object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mdrules.Rules.validate_rules">
 <span class="sig-name descname"><span class="pre">validate_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_rules</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_check</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mdrules.Rules.validate_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>With rules and a file to check run all of the rules.</p>
+<dd><p>With rules and a file to check run all of the rules. Add the checks
+to the <cite>checks</cite> property of the <cite>Rules</cite> object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>[</strong><strong>ParamName</strong><strong>]</strong> (<em>[</em><em>ParamType</em><em>]</em><em>(</em><em>, </em><em>optional</em><em>)</em>) – [ParamDescription], defaults to [DefaultParamVal]</p>
+<dd class="field-odd"><p><strong>json_rules</strong> – A json object that contains valid rules.</p>
 </dd>
 </dl>
 <p>…
-:raises [ErrorType]: [ErrorDescription]
+:raises ValueError: Duplicate rule ID in the JSON file.
 …
-:return: [ReturnDescription]
-:rtype: [ReturnType]</p>
+:return: None
+:rtype: None</p>
 </dd></dl>
 
 </dd></dl>
